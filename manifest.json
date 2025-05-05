@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Enable Copy Paste",
+  "version": "1.0",
+  "description": "Enable copy and paste functionality on websites that disable it.",
+  "permissions": ["activeTab", "contextMenus"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
